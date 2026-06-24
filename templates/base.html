@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Enterprise Dashboard</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <a href="/">Sales</a>
+        <a href="/customers">Customers</a>
+        <a href="/finance">Finance</a>
+        <a href="/inventory">Inventory</a>
+    </div>
+    <div class="main-content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

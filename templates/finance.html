@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Finance Dashboard</title>
+
+
+<link rel="stylesheet"
+href="{{url_for('static',filename='css/style.css')}}">
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+
+
+<body>
+
+
+<div class="sidebar">
+
+
+<h2>Analytics Pro</h2>
+
+
+<a href="/">Dashboard</a>
+<a href="/sales">Sales</a>
+<a href="/customers">Customers</a>
+<a href="/finance">Finance</a>
+<a href="/inventory">Inventory</a>
+<a href="/prediction">Prediction</a>
+
+
+</div>
+
+
+
+
+
+<div class="main">
+
+
+<h1>Finance Dashboard</h1>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>Total Revenue</h3>
+
+<h1>$500K</h1>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Total Expense</h3>
+
+<h1>$200K</h1>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Net Profit</h3>
+
+<h1>$300K</h1>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Profit Margin</h3>
+
+<h1>60%</h1>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="charts">
+
+
+<div>
+
+<canvas id="revenueChart"></canvas>
+
+</div>
+
+
+
+<div>
+
+<canvas id="expenseChart"></canvas>
+
+</div>
+
+
+
+<div>
+
+<canvas id="profitChart"></canvas>
+
+</div>
+
+
+
+<div>
+
+<canvas id="budgetChart"></canvas>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+
+new Chart(document.getElementById("revenueChart"),{
+
+
+type:"line",
+
+
+data:{
+
+
+labels:["Jan","Feb","Mar","Apr","May"],
+
+
+datasets:[{
+
+label:"Revenue",
+
+data:[50000,70000,90000,120000,150000]
+
+}]
+
+
+}
+
+
+});
+
+
+
+
+
+
+new Chart(document.getElementById("expenseChart"),{
+
+
+type:"bar",
+
+
+data:{
+
+
+labels:["Jan","Feb","Mar","Apr"],
+
+
+datasets:[{
+
+
+label:"Expense",
+
+data:[20000,30000,40000,50000]
+
+
+}]
+
+
+}
+
+
+});
+
+
+
+
+
+
+
+new Chart(document.getElementById("profitChart"),{
+
+
+type:"pie",
+
+
+data:{
+
+
+labels:["Profit","Expense"],
+
+
+datasets:[{
+
+
+data:[300,200]
+
+
+}]
+
+
+}
+
+
+});
+
+
+
+
+
+
+
+new Chart(document.getElementById("budgetChart"),{
+
+
+type:"doughnut",
+
+
+data:{
+
+
+labels:["Used","Remaining"],
+
+
+datasets:[{
+
+
+data:[70,30]
+
+
+}]
+
+
+}
+
+
+});
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

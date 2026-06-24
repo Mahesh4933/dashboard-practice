@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Inventory Dashboard</title>
+
+
+<link rel="stylesheet"
+href="{{url_for('static',filename='css/style.css')}}">
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+
+
+<body>
+
+
+<div class="sidebar">
+
+
+<h2>Analytics Pro</h2>
+
+
+<a href="/">Dashboard</a>
+<a href="/sales">Sales</a>
+<a href="/customers">Customers</a>
+<a href="/finance">Finance</a>
+<a href="/inventory">Inventory</a>
+<a href="/prediction">Prediction</a>
+
+
+</div>
+
+
+
+
+
+<div class="main">
+
+
+<h1>Inventory Dashboard</h1>
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+<h3>Total Products</h3>
+
+<h1>2500</h1>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Total Stock</h3>
+
+<h1>15000</h1>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Low Stock Items</h3>
+
+<h1>120</h1>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Stock Value</h3>
+
+<h1>$750K</h1>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="charts">
+
+
+<div>
+
+<canvas id="stockChart"></canvas>
+
+</div>
+
+
+
+<div>
+
+<canvas id="categoryChart"></canvas>
+
+</div>
+
+
+
+<div>
+
+<canvas id="lowStockChart"></canvas>
+
+</div>
+
+
+
+<div>
+
+<canvas id="warehouseChart"></canvas>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+new Chart(document.getElementById("stockChart"),{
+
+
+type:"bar",
+
+
+data:{
+
+
+labels:["Laptop","Mobile","Tablet","Monitor"],
+
+
+datasets:[{
+
+
+label:"Stock Quantity",
+
+
+data:[500,800,300,600]
+
+
+}]
+
+
+}
+
+
+});
+
+
+
+
+
+
+
+
+new Chart(document.getElementById("categoryChart"),{
+
+
+type:"pie",
+
+
+data:{
+
+
+labels:["Electronics","Furniture","Accessories"],
+
+
+datasets:[{
+
+
+data:[50,30,20]
+
+
+}]
+
+
+}
+
+
+});
+
+
+
+
+
+
+
+
+new Chart(document.getElementById("lowStockChart"),{
+
+
+type:"line",
+
+
+data:{
+
+
+labels:["Jan","Feb","Mar","Apr","May"],
+
+
+datasets:[{
+
+
+label:"Low Stock Items",
+
+
+data:[20,40,35,60,45]
+
+
+}]
+
+
+}
+
+
+});
+
+
+
+
+
+
+
+
+new Chart(document.getElementById("warehouseChart"),{
+
+
+type:"doughnut",
+
+
+data:{
+
+
+labels:["Warehouse A","Warehouse B","Warehouse C"],
+
+
+datasets:[{
+
+
+data:[40,35,25]
+
+
+}]
+
+
+}
+
+
+});
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

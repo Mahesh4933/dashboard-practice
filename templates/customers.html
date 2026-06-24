@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Customer Dashboard</title>
+
+
+<link rel="stylesheet"
+href="{{url_for('static',filename='css/style.css')}}">
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+
+<body>
+
+
+<div class="sidebar">
+
+
+<h2>Analytics Pro</h2>
+
+
+<a href="/">Dashboard</a>
+<a href="/sales">Sales</a>
+<a href="/customers">Customers</a>
+<a href="/finance">Finance</a>
+<a href="/inventory">Inventory</a>
+<a href="/prediction">Prediction</a>
+
+
+</div>
+
+
+
+
+<div class="main">
+
+
+<h1>Customer Dashboard</h1>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>Total Customers</h3>
+
+<h1>5400</h1>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>New Customers</h3>
+
+<h1>850</h1>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Returning</h3>
+
+<h1>3200</h1>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Satisfaction</h3>
+
+<h1>92%</h1>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="charts">
+
+
+<div>
+
+<canvas id="customerGrowth"></canvas>
+
+</div>
+
+
+
+<div>
+
+<canvas id="customerType"></canvas>
+
+</div>
+
+
+
+<div>
+
+<canvas id="ageChart"></canvas>
+
+</div>
+
+
+
+<div>
+
+<canvas id="countryChart"></canvas>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<script>
+
+
+new Chart(document.getElementById("customerGrowth"),{
+
+
+type:"line",
+
+
+data:{
+
+
+labels:["Jan","Feb","Mar","Apr","May"],
+
+
+datasets:[{
+
+
+label:"Customer Growth",
+
+
+data:[200,350,500,700,850]
+
+
+}]
+
+
+}
+
+
+});
+
+
+
+
+
+
+new Chart(document.getElementById("customerType"),{
+
+
+type:"doughnut",
+
+
+data:{
+
+
+labels:["New","Returning"],
+
+
+datasets:[{
+
+
+data:[850,3200]
+
+
+}]
+
+
+}
+
+
+});
+
+
+
+
+
+
+
+new Chart(document.getElementById("ageChart"),{
+
+
+type:"bar",
+
+
+data:{
+
+
+labels:["18-25","26-35","36-50","50+"],
+
+
+datasets:[{
+
+
+label:"Customers",
+
+
+data:[1200,2200,1500,500]
+
+
+}]
+
+
+}
+
+
+});
+
+
+
+
+
+
+new Chart(document.getElementById("countryChart"),{
+
+
+type:"pie",
+
+
+data:{
+
+
+labels:["India","USA","UK","Others"],
+
+
+datasets:[{
+
+
+data:[60,20,10,10]
+
+
+}]
+
+
+}
+
+
+});
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

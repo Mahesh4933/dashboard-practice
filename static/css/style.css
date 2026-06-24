@@ -1,0 +1,256 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+
+body{
+
+    background:#f4f7fb;
+
+}
+
+
+/* SIDEBAR */
+
+.sidebar{
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    width:250px;
+    height:100vh;
+
+    background:#0f172a;
+
+    padding:25px;
+
+    color:white;
+
+}
+
+
+.sidebar h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.sidebar a{
+
+    display:block;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px;
+
+    border-radius:8px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.sidebar a:hover{
+
+    background:#2563eb;
+
+}
+
+
+
+/* MAIN AREA */
+
+
+.main{
+
+    margin-left:250px;
+
+    padding:30px;
+
+}
+
+
+
+
+.main h1{
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* KPI CARDS */
+
+
+.cards{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+
+}
+
+
+
+
+.card{
+
+
+    background:white;
+
+
+    padding:25px;
+
+
+    border-radius:15px;
+
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+.card h3{
+
+    color:#64748b;
+
+}
+
+
+
+.card h1{
+
+    color:#2563eb;
+
+    margin-top:10px;
+
+}
+
+
+
+/* CHART AREA */
+
+
+.charts{
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+    gap:25px;
+
+
+    margin-top:30px;
+
+
+}
+
+
+
+.charts div{
+
+
+    background:white;
+
+
+    padding:25px;
+
+
+    height:350px;
+
+
+    border-radius:15px;
+
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+
+canvas{
+
+
+    width:100% !important;
+
+    height:100% !important;
+
+
+}
+
+
+
+
+
+
+/* MOBILE RESPONSIVE */
+
+
+@media(max-width:900px){
+
+
+.sidebar{
+
+    width:100%;
+
+    height:auto;
+
+    position:relative;
+
+}
+
+
+.main{
+
+    margin-left:0;
+
+}
+
+
+
+.cards{
+
+
+grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+
+.charts{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+}
